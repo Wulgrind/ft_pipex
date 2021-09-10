@@ -11,7 +11,7 @@ int	ft_child(int f1, cmd1)
 	close (end[0]);
 	close (f1);
 
-	return(1);
+	return (1);
 }
 
 int	ft_parent(int f2, cmd2)
@@ -20,6 +20,12 @@ int	ft_parent(int f2, cmd2)
 
 	status = 0;
 	waitpid(-1, &status, 0);
+	dup2(f2, 1);
+	dup2(end[0], 1);
+	close(end[1]);
+	close(f2);
+
+	return (1);
 }
 
 void	pipex(int f1, int f2)
