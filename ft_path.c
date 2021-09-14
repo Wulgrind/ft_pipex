@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:39:11 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 19:03:27 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:09:19 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,14 @@ int	ft_len2(char **str)
 
 void	ft_write2(t_param *p)
 {
-	
+	while (p->args2[0][p->k])
+	{
+		p->finalpath2[p->i][p->j2] = p->args2[0][p->k];
+		p->j2++;
+		p->k++;
+	}
+	p->finalpath2[p->i][p->j2] = '\0';
+	p->i++;
 }
 
 void	ft_write(t_param *p)
@@ -62,18 +69,8 @@ void	ft_write(t_param *p)
 		}
 		p->finalpath1[p->i][p->j] = '\0';
 		p->k = 0;
-		//ft_write2(p);
-		while (p->args2[0][p->k])
-		{
-			p->finalpath2[p->i][p->j2] = p->args2[0][p->k];
-			p->j2++;
-			p->k++;
-		}
-		p->finalpath2[p->i][p->j2] = '\0';
-		p->i++;
+		ft_write2(p);
 	}
-	p->finalpath1[p->i] = 0;
-	p->finalpath2[p->i] = 0;
 }
 
 int	ft_path(t_param *p)
@@ -96,5 +93,7 @@ int	ft_path(t_param *p)
 	if (!p->finalpath2)
 		return (-1);
 	ft_write(p);
+	p->finalpath1[p->i] = 0;
+	p->finalpath2[p->i] = 0;
 	return (1);
 }
