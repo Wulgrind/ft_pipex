@@ -6,24 +6,38 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:47:57 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/13 18:36:27 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 16:18:11 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdio.h>
+
 typedef	struct	s_param
 {
 	char	*path;
 	char	**ipath;
-	char	**args;
+	char	**args1;
+	char	**args2;
+	char	**finalpath1;
+	char	**finalpath2;
+	int		end[2];
+	int		f1;
+	int		f2;
 }				t_param;
 
-int		ft_child(t_param *p, cmd1);
-int		ft_parent(t_param *p, cmd2);
-void	pipex(t_param *p, char **av);
+int		ft_child(t_param *p);
+int		ft_parent(t_param *p);
+void	pipex(t_param *p);
 char	**ft_split(char const *s, char c);
 void	ft_parsing(char **envp, t_param *p, char **av);
+int		ft_path(t_param *p);
+void	ft_init(t_param *p);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif

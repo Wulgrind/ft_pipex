@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 18:16:30 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 15:56:55 by qbrillai         ###   ########.fr       */
+/*   Created: 2021/09/14 15:58:49 by qbrillai          #+#    #+#             */
+/*   Updated: 2021/09/14 15:59:46 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void	ft_init(t_param *p)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	p->path = NULL;
-	p->ipath = NULL;
-	p->args1 = NULL;
-	p->args2 = NULL;
-	p->finalpath1 = NULL;
-	p->finalpath2 = NULL;
+	unsigned int	i;
+
+	i = 0;
+	if (!dst || !src)
+		return (0);
+	if (size > 0)
+	{
+		while (--size && src[i])
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	while (src[i])
+		i++;
+	return (i);
 }
