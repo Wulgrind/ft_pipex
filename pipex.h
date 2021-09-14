@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:47:57 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 16:18:11 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:03:08 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 
-typedef	struct	s_param
+typedef struct s_param
 {
 	char	*path;
 	char	**ipath;
@@ -29,6 +29,10 @@ typedef	struct	s_param
 	int		end[2];
 	int		f1;
 	int		f2;
+	int		i;
+	int		j;
+	int		k;
+	int		j2;
 }				t_param;
 
 int		ft_child(t_param *p);
