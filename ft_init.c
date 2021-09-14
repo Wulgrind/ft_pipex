@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:16:30 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 15:56:55 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:38:48 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ void	ft_init(t_param *p)
 	p->args2 = NULL;
 	p->finalpath1 = NULL;
 	p->finalpath2 = NULL;
+	p->finalargs1 = NULL;
+	p->finalargs2 = NULL;
 }
