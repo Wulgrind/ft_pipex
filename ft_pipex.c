@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:33:05 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/15 15:00:32 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:44:57 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_child(t_param *p, char **envp)
 	close (p->f1);
 	i = - 1;
 	while (p->ipath[++i])
-		execve(p->finalpath1[i], p->finalargs1, envp);
+		execve(p->finalpath1[i], p->args1, envp);
 	perror("Error");
 	return (1);
 }
@@ -45,7 +45,7 @@ int	ft_parent(t_param *p, char **envp)
 	close(p->f2);
 	i = - 1;
 	while (p->ipath[++i])
-		execve(p->finalpath2[i], p->finalargs2, envp);
+		execve(p->finalpath2[i], p->args2, envp);
 	perror("Error");
 	return (1);
 }
