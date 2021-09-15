@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:26:14 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 19:56:35 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 14:18:52 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int ac, char **av, char **envp)
 	ft_parsing(envp, &p, av);
 	if (p.f1 < 0 || p.f2 < 0)
 		return (-1);
-	//pipex(&p, av);
+	pipex(&p, av);
 	close (p.f1);
 	close (p.f2);
 	int	i = 0;

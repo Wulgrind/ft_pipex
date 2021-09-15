@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:39:11 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 19:10:40 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 14:18:35 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_write2(t_param *p)
 		p->j2++;
 		p->k++;
 	}
-	p->finalpath2[p->i][p->j2] = '\0';
+	p->finalpath2[p->i][p->j2] = 0;
 	p->i++;
 }
 
@@ -67,7 +67,7 @@ void	ft_write(t_param *p)
 			p->j++;
 			p->k++;
 		}
-		p->finalpath1[p->i][p->j] = '\0';
+		p->finalpath1[p->i][p->j] = 0;
 		p->k = 0;
 		ft_write2(p);
 	}

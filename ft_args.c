@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:36:53 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 19:54:02 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 12:29:15 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_args(t_param *p)
 		j++;
 		i++;
 	}
-	p->finalargs1[i] = 0;
+	p->finalargs1[i] = NULL;
 	i = 0;
 	j = 1;
 	p->finalargs2 = malloc(sizeof(char *) * (ft_len(p->args2)));
@@ -50,6 +50,6 @@ int	ft_args(t_param *p)
 		j++;
 		i++;
 	}
-	p->finalargs2[i] = 0;
+	p->finalargs2[i] = NULL;
 	return (1);
 }

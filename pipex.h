@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:47:57 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 19:56:38 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 12:01:04 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ typedef struct s_param
 	int		col;
 }				t_param;
 
-int		ft_child(t_param *p);
-int		ft_parent(t_param *p);
-void	pipex(t_param *p);
+int		ft_child(t_param *p, char **envp);
+int		ft_parent(t_param *p, char **envp);
+void	pipex(t_param *p, char ** envp);
 char	**ft_split(char const *s, char c);
 void	ft_parsing(char **envp, t_param *p, char **av);
 int		ft_path(t_param *p);
