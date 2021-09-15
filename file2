@@ -1,0 +1,15 @@
+a.out
+file1
+file2
+file3
+file4
+ft_exit.c
+ft_init.c
+ft_parsing.c
+ft_path.c
+ft_pipex.c
+ft_split.c
+ft_strlcpy.c
+main.c
+pipex.h
+pipex.h.gch
