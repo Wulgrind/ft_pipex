@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:47:57 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/15 14:58:42 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:47:47 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ typedef struct s_param
 	char	**args2;
 	char	**finalpath1;
 	char	**finalpath2;
-	char	**finalargs1;
-	char	**finalargs2;
 	int		end[2];
 	int		f1;
 	int		f2;
@@ -47,7 +45,6 @@ void	ft_parsing(char **envp, t_param *p, char **av);
 int		ft_path(t_param *p);
 void	ft_init(t_param *p);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-int		ft_args(t_param *p);
 void	ft_exit(t_param *);
 
 #endif

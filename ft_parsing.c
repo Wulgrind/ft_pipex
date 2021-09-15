@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:15:36 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/14 19:37:20 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:47:50 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,4 @@ void	ft_parsing(char **envp, t_param *p, char **av)
 	p->args1 = ft_split(av[2], ' ');
 	p->args2 = ft_split(av[3], ' ');
 	ft_path(p);
-	ft_args(p);
 }
