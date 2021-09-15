@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:26:14 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/15 14:18:52 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 14:58:08 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,6 @@ int	main(int ac, char **av, char **envp)
 	pipex(&p, av);
 	close (p.f1);
 	close (p.f2);
-	int	i = 0;
-	int	j = 0;
-	while (p.finalpath1[i])
-	{
-		j = 0;
-		while (p.finalpath1[i][j])
-		{
-			ft_putchar(p.finalpath1[i][j]);
-			j++;
-		}
-		ft_putchar('\n');
-		i++;
-	}
+	ft_exit(&p);
 	return (0);
 }
