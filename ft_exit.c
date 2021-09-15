@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 14:58:11 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/15 15:33:26 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:54:22 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_exit3(t_param *p)
 {
 	int	i;
-	
+
 	i = -1;
 	if (p->finalpath2 != NULL)
 	{
@@ -28,13 +28,13 @@ void	ft_exit3(t_param *p)
 void	ft_exit2(t_param *p)
 {
 	int	i;
-	
+
 	i = -1;
 	if (p->args2 != NULL)
 	{
-			while (p->args2[++i])
-				free(p->args2[i]);
-			free(p->args2);
+		while (p->args2[++i])
+			free(p->args2[i]);
+		free(p->args2);
 	}
 	i = -1;
 	if (p->finalpath1 != NULL)
@@ -49,6 +49,7 @@ void	ft_exit2(t_param *p)
 void	ft_exit(t_param *p)
 {
 	int	i;
+
 	i = -1;
 	if (p->path != NULL)
 		free (p->path);

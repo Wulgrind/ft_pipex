@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:15:36 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/15 15:47:50 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:54:36 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_pathfinder(char **envp, t_param *p)
 		if (envp[p->row][0] == 'P' && envp[p->row][1] == 'A'
 			&& envp[p->row][2] == 'T' && envp[p->row][3] == 'H'
 			&& envp[p->row][4] == '=')
-			break;
+			break ;
 		p->row++;
 	}
 	p->i = ft_pathlen(p->row, envp);

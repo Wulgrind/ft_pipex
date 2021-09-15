@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:33:05 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/15 15:44:57 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/15 15:55:39 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_child(t_param *p, char **envp)
 {
 	int	check;
-	int		i;
+	int	i;
 
 	check = dup2(p->f1, STDIN_FILENO);
 	if (check < 0)
@@ -25,7 +25,7 @@ int	ft_child(t_param *p, char **envp)
 		return (0);
 	close (p->end[0]);
 	close (p->f1);
-	i = - 1;
+	i = -1;
 	while (p->ipath[++i])
 		execve(p->finalpath1[i], p->args1, envp);
 	perror("Error");
@@ -43,7 +43,7 @@ int	ft_parent(t_param *p, char **envp)
 	dup2(p->end[0], STDIN_FILENO);
 	close(p->end[1]);
 	close(p->f2);
-	i = - 1;
+	i = -1;
 	while (p->ipath[++i])
 		execve(p->finalpath2[i], p->args2, envp);
 	perror("Error");
